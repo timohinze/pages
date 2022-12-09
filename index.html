@@ -3,26 +3,58 @@
 
         <style>
             .weihnachts-header{
+                position: relative;
                 width: 900px;
                 height: 400px;
                 background-color: #504058dd;
+                overflow: hidden;
             }
             .flocke{
-                height: 250px;
-  width: 250px;
+                position: absolute;
+                height: 390px;
+  width: 390px;
   background-color: #a4c8d8;
   border-radius: 50%;
-  display: inline-block;
+  filter: blur(10px);
+  animation: drop 12s cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation-iteration-count:infinite;
+
             }
+            .flocke-1{
+                left: -12%;
+                top: -10%;
+            }
+            .flocke-2{
+                left: 40%;
+                top: -40%;
+
+                animation-delay: 1s;
+            }
+            .flocke-3{
+                left: 80%;
+                top: -26%;
+
+                animation-delay: 0.5s;
+            }
+
+
+            @keyframes drop{
+  0%{opacity: 0}
+  20%{opacity: 0.7;}
+  100%{transform: translate(90px, 580px);
+    
+)}
+
+}
         </style>
 
     </head>
 <body>
 <div class="weihnachts-header">
 Header
-<div class="flocke"></div>
-<div class="flocke"></div>
-<div class="flocke"></div>
+<div class="flocke flocke-1"></div>
+<div class="flocke flocke-2"></div>
+<div class="flocke flocke-3"></div>
 </div>
 
 
